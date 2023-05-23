@@ -1,2 +1,2 @@
-# Progranação Orientada a Objetod
-## Orientador: Alexander Toledo
+# Progranação Orientada a Objetos
+Orientador: Alexander Toledo
