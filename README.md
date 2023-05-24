@@ -1,2 +1,2 @@
-# Progranação Orientada a Objetos
+# Programação Orientada a Objetos
 Orientador: Alexander Toledo
