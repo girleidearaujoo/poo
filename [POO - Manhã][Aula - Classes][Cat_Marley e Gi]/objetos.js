@@ -4,7 +4,8 @@ const celular1 = new Celular(
     "6",
     "128",
     "OCTA-CORE",
-    "4"
+    "4",
+    "s20fe.webp"
 );
 const celular2 = new Celular(
     "Motorola",
@@ -12,7 +13,8 @@ const celular2 = new Celular(
     "4",
     "128",
     "Snapdragon 480 Octacore",
-    "3"
+    "3",
+    "motog52.jpg"
 );
 const celular3 = new Celular(
     "Apple",
@@ -20,7 +22,8 @@ const celular3 = new Celular(
     "12",
     "513",
     "A16",
-    "4"
+    "4",
+    "iphone14.jpg"
 );
 const celular4 = new Celular(
     "Samsung",
@@ -28,7 +31,8 @@ const celular4 = new Celular(
     "8",
     "256",
     "Cortex-X2",
-    "4"
+    "4",
+    "zflip4.jpg"
 );
 const celular5 = new Celular(
     "Motorola",
@@ -36,6 +40,7 @@ const celular5 = new Celular(
     "8",
     "256",
     "Cortex-A78",
-    "3"
+    "3",
+    "moto-edge-40-02.webp"
 );
 console.log(celular5.armazenamento);
