@@ -1,0 +1,31 @@
+.container-card {
+    display: flex;
+    gap: 12px;
+}
+
+.card {
+    border-radius: 16px;
+    border: 1px solid pink;
+    padding: 20px;
+}
+
+.foto {
+    width: 220px;
+}
+
+.info {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info .modelo {
+    font-size: 16pt;
+}
+
+.info .marca {
+    font-size: 16pt;
+    color: #333333;
+}
+
+.info .outros {
+    font-size: 16pt;
+}
