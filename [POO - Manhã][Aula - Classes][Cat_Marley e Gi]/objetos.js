@@ -46,21 +46,21 @@ const celular5 = new Celular(
 document.write(
     `
     <div class="card">
-        <img src="img/${celular1.foto}">
+        <img class = "foto" src="img/${celular1.foto}">
         <div class="info">
             <h3 class="modelo">
                 ${celular1.modelo}
             </h3>
             <p class="marca">
-                ${celular1.modelo}
+                ${celular1.marca}
             </p>
             <span class="outros">${celular1.processador}</span>
             <span class="separador">|</span>
-            <span class="outros">${celular1.amarzenamento}</span>
+            <span class="outros">${celular1.armazenamento}</span>
             <span class="separador">|</span>
             <span class="outros">${celular1.ram}</span>
             <span class="separador">|</span>
-            <span class="outros">${celular1.qtdCameras}</span>
+            <span class="outros">${celular1.qtdDeCameras}</span>
             <span class="separador">|</span>
         </div>
     </div>
