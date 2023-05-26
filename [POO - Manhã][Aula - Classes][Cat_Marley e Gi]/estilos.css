@@ -1,31 +1,41 @@
-.container-card {
+.container-cards{
     display: flex;
     gap: 12px;
 }
 
-.card {
+.card{
     border-radius: 16px;
-    border: 1px solid pink;
+    border: 1px solid #dddddd;
     padding: 20px;
+
+    box-shadow: #aaaaaa 2px 2px 4px;
+
+    display: flex;
+    flex-direction: column;
+
 }
 
-.foto {
+.foto{
     width: 220px;
+    height: 280px;
+    object-fit: cover;
 }
-
-.info {
+.info{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.info .modelo {
-    font-size: 16pt;
-}
-
-.info .marca {
+.info .modelo{
     font-size: 16pt;
     color: #333333;
 }
-
-.info .outros {
-    font-size: 16pt;
+.info .marca{
+    font-size: 12pt;
+    color: #777777;
+}
+.info .outros{
+    font-size: 12pt;
+}
+.info .separador{
+    color: #aaaaaa;
+    padding: 10px;
 }
