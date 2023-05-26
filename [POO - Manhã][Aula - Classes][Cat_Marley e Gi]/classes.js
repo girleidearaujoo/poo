@@ -9,3 +9,12 @@ class Celular {
         this.foto = foto
     }
 }
+class Tv{
+    constructor(marca, modelo, tamanho, foto){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.tamanho = tamanho;
+        this.foto = foto;
+    }
+}
+// oi david :)
