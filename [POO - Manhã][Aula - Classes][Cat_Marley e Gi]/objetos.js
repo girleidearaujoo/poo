@@ -66,3 +66,52 @@ document.write(
     </div>
     `
 )
+const tv1 = new Tv(
+    "AOC",
+    "43S5135/78G",
+    '43"',
+    'aoc.webp'
+);
+const tv2 = new Tv(
+    "Philips",
+    "70PUG7406/78",
+    '70"',
+    'philips.jpg'
+);
+const tv3 = new Tv(
+    "LG",
+    "43UQ7500",
+    '43"',
+    'lg-led.webp'
+);
+const tv4 = new Tv(
+    "LG",
+    "OLED55C1",
+    '55"',
+    'lg-oled.webp'
+);
+const tv5 = new Tv(
+    "Samsung",
+    "QN55QN85BAGXZD",
+    '55"',
+    'samsung.webp'
+);
+var tvs = [tv1, tv2, tv3, tv4, tv5]
+
+for (let i = 0; i < tvs.length; i++) {
+    document.write(
+        `
+        <div class="card">
+            <img class = "foto" src="img/${tvs[i].foto}">
+            <div class="info">
+                <h3 class="modelo">
+                    ${tvs[i].modelo}
+                </h3>
+                <p class="marca">
+                    ${tvs[i].marca}
+                </p>
+            </div>
+        </div>
+        `
+    )
+}
