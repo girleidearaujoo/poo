@@ -5,7 +5,8 @@ const celular1 = new Celular(
     "128",
     "OCTA-CORE",
     "4",
-    "s20fe.webp"
+    "s20fe.webp",
+    1
 );
 const celular2 = new Celular(
     "Motorola",
@@ -14,7 +15,8 @@ const celular2 = new Celular(
     "128",
     "Snapdragon 480 Octacore",
     "3",
-    "motog52.jpg"
+    "motog52.jpg",
+    2
 );
 const celular3 = new Celular(
     "Apple",
@@ -23,7 +25,8 @@ const celular3 = new Celular(
     "513",
     "A16",
     "4",
-    "iphone14.jpg"
+    "iphone14.jpg",
+    3
 );
 const celular4 = new Celular(
     "Samsung",
@@ -32,7 +35,8 @@ const celular4 = new Celular(
     "256",
     "Cortex-X2",
     "4",
-    "zflip4.jpg"
+    "zflip4.jpg",
+    4
 );
 const celular5 = new Celular(
     "Motorola",
@@ -41,31 +45,32 @@ const celular5 = new Celular(
     "256",
     "Cortex-A78",
     "3",
-    "moto-edge-40-02.webp"
+    "moto-edge-40-02.webp",
+    5
 );
-document.write(
-    `
-    <div class="card">
-        <img class = "foto" src="img/${celular1.foto}">
-        <div class="info">
-            <h3 class="modelo">
-                ${celular1.modelo}
-            </h3>
-            <p class="marca">
-                ${celular1.marca}
-            </p>
-            <span class="outros">${celular1.processador}</span>
-            <span class="separador">|</span>
-            <span class="outros">${celular1.armazenamento}</span>
-            <span class="separador">|</span>
-            <span class="outros">${celular1.ram}</span>
-            <span class="separador">|</span>
-            <span class="outros">${celular1.qtdDeCameras}</span>
-            <span class="separador">|</span>
-        </div>
-    </div>
-    `
-)
+// document.write(
+//     `
+//     <div class="card">
+//         <img class = "foto" src="img/${celular1.foto}">
+//         <div class="info">
+//             <h3 class="modelo">
+//                 ${celular1.modelo}
+//             </h3>
+//             <p class="marca">
+//                 ${celular1.marca}
+//             </p>
+//             <span class="outros">${celular1.processador}</span>
+//             <span class="separador">|</span>
+//             <span class="outros">${celular1.armazenamento}</span>
+//             <span class="separador">|</span>
+//             <span class="outros">${celular1.ram}</span>
+//             <span class="separador">|</span>
+//             <span class="outros">${celular1.qtdDeCameras}</span>
+//             <span class="separador">|</span>
+//         </div>
+//     </div>
+//     `
+// )
 const tv1 = new Tv(
     "AOC",
     "43S5135/78G",
@@ -98,23 +103,24 @@ const tv5 = new Tv(
 );
 var tvs = [tv1, tv2, tv3, tv4, tv5]
 
-for (let i = 0; i < tvs.length; i++) {
-    document.write(
-        `
-        <div class="card">
-            <img class = "foto" src="img/${tvs[i].foto}">
-            <div class="info">
-                <h3 class="modelo">
-                    ${tvs[i].modelo}
-                </h3>
-                <p class="marca">
-                    ${tvs[i].marca}
-                </p>
-            </div>
-        </div>
-        `
-    )
-}
+// for (let i = 0; i < tvs.length; i++) {
+//     document.write(
+//         `
+//         <div class="card">
+//             <img class = "foto" src="img/${tvs[i].foto}">
+//             <div class="info">
+//                 <h3 class="modelo">
+//                     ${tvs[i].modelo}
+//                 </h3>
+//                 <p class="marca">
+//                     ${tvs[i].marca}
+//                 </p>
+//             </div>
+//         </div>
+//         `
+//     )
+// }
+
 
 // Criando 2 listas de Favoritos:
 let meusProdutosTop = new Favoritos();
@@ -129,7 +135,7 @@ meusProdutosTop.adicionarProduto(tv1);
 // produtosTopDaDarline.adicionarProduto(celular5);
 
 // Exibindo os produtos da primeira lista no HTML:
-// meusProdutosTop.exibirNoHTML(ss);
+meusProdutosTop.exibirNoHTML();
 
 // Exibindo os produtos da segunda lista no HTML:
 // produtosTopDaDarline.exibirNoHTML();
