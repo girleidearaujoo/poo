@@ -115,3 +115,24 @@ for (let i = 0; i < tvs.length; i++) {
         `
     )
 }
+
+// Criando 2 listas de Favoritos:
+let meusProdutosTop = new Favoritos();
+
+// Adicionando produtos À primeira lista de favoritos
+meusProdutosTop.adicionarProduto(celular1);
+meusProdutosTop.adicionarProduto(tv1);
+
+// Adicionando produtos À segunda lista de favoritos
+// produtosTopDaDarline.adicionarProduto(celular1);
+// produtosTopDaDarline.adicionarProduto(tv1);
+// produtosTopDaDarline.adicionarProduto(celular5);
+
+// Exibindo os produtos da primeira lista no HTML:
+// meusProdutosTop.exibirNoHTML(ss);
+
+// Exibindo os produtos da segunda lista no HTML:
+// produtosTopDaDarline.exibirNoHTML();
+
+// produtosTopDaDarline.removerProduto(1)
+
