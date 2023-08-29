@@ -1,0 +1,61 @@
+body{
+    
+    background-color: #000000;
+}
+
+.card{
+    width: 720px;
+    margin-bottom: 20px;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: -6px;
+    background-color: #303030;
+    box-shadow: 4px 12px 0px #333333;
+    
+}
+
+.cabecalho .turma{
+    font-family: 'Roboto', serif;
+    color: #75d063;
+    font-size: 20px;
+}
+
+.cabecalho .nome{
+    font-family: 'Roboto Slab', serif;
+    color: #ffffff;
+    font-size: 32px;
+}
+
+.cabecalho .logo{
+    height: 140px;
+}
+
+.conteudo{
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-around;
+
+    padding: 20px;
+
+}
+
+.conteudo .foto{
+    width: 120px;
+    border: solid 1px black;
+}
+.conteudo .info{
+    width: 450px;
+}
+.info .label {
+    color: rgb(12, 164, 144);
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+}
+.info .valor{
+    color: rgb(9, 42, 44);
+    border-bottom: 1px solid rgb(62, 140, 160);
+} 
