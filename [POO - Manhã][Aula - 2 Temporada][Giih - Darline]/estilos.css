@@ -15,6 +15,7 @@ body{
     margin-left: -6px;
     background-color: #303030;
     box-shadow: 4px 12px 0px #333333;
+    z-index: 10;
     
 }
 
@@ -38,7 +39,7 @@ body{
     background-color: #eaeaea;
     display: flex;
     justify-content: space-around;
-
+    z-index: 5;
     padding: 20px;
 
 }
