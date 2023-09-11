@@ -9,8 +9,8 @@ class Aluno{
     }
 
     getIdade(){
-        var date = new Date()
-        var dataAtual = date.getFullYear()
+        var date = new Date();
+        var dataAtual = date.getFullYear();
         var data = this.dataDeNascimento.split('/').map(i => Number(i))
         return (dataAtual - data[2]) 
     }
