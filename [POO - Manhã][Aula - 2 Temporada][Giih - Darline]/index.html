@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <form id="cadastroAluno">
+    <form id="cadastroAluno" action="#">
         <div>
             <label for="">Turma</label>
             <input id="iptTurma" type="text">
@@ -27,12 +27,12 @@
             <input id="iptPrimeiroNome" type="text">
         </div>
         <div>
-            <label for="">Segundo Nome</label>
-            <input id="iptSegundoNome" type="text">
+            <label for="">Ultimo Nome</label>
+            <input id="iptUltimoNome" type="text">
         </div>
         <div>
             <label for="">Data de Nascimento</label>
-            <input id="iptDataDeNascimento" type="text">
+            <input id="iptDataDeNascimento" type="date">
         </div>
         <div>
             <label for="">Matricula</label>
@@ -40,9 +40,12 @@
         </div>
         <button id="btnCadastrar">Cadastrar</button>
     </form>
+    <div id="containerCards">
+        
+    </div>
     <script src="classes.js"></script>
     <script src="objetos.js"></script>
-
+    <script src="controlador.js"></script>
 </body>
 
 </html>
