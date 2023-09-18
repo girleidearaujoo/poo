@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Revenda</title>
+</head>
+
+<style>
+	img.alta {
+		float: left;
+		height: 350px;
+		width: 450px;
+	}
+
+	h1 {
+		border-bottom-style: inset;
+	}
+</style>
+
+<body>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC0oJDRjBZ0KeLhIXgz_gGw44u302b0LaGZA&usqp=CAU"
+		alt="Revenda Herbie" class="alta">
+
+	<h1>Revenda de carros LBMS</h1>
+
+	<form>
+		<p>Modelo: <input type="text" id="inModelo" autofocus required> </p>
+
+		<p>Preço R$:
+			<input type="number" id="inPreco" required>
+			<input type="submit" value="Adicionar">
+		</p>
+
+		<input type="button" value="Listar Todos" id="btListar">
+		<input type="button" value="Ordem Alfabética" id="btOrdem">
+		<input type="button" value="Filtrar por Preço" id="btFiltrar">
+	</form>
+
+	<pre></pre>
+
+	<script>
+		let carros = []    // declara vetor global
+
+		carros.push({ mod: "Doblo", pr: 36000.00 })
+		carros.push({ mod: "Fusion", pr: 80000.00 })
+		carros.push({ mod: "Argo", pr: 75000.00 })
+		carros.push({ mod: "Virtus", pr: 88500.00 })
+		carros.push({ mod: "Amarok", pr: 108300.00 })
+		carros.push({ mod: "Onix", pr: 50000.00 })
+
+		// Cria referência aos elementos contendo os dados de entrada
+		let frm = document.querySelector("form")
+		let resp = document.querySelector("pre")
+
+		frm.addEventListener("submit", (e) => {
+			e.preventDefault()
+
+			const modelo = frm.inModelo.value  // obtém conteúdo dos campos
+			const preco = Number(frm.inPreco.value)
+
+			// adiciona dados ao vetor de objetos
+			carros.push({ mod: modelo, pr: preco })
+
+			// limpa campos e posiciona cursor em inModelo
+			frm.inModelo.value = ""
+			frm.inPreco.value = ""
+			inModelo.focus()
+
+			// dispara um evento de click em btListar (equivale a um click no botão na página)
+			frm.btListar.dispatchEvent(new Event("click"))
+		}) //fim função adicionarCarros
+
+
+		frm.btListar.addEventListener("click", () => {
+			// verifica se vetor está vazio
+			if (carros.length == 0) {
+				alert("Não há carros na lista")
+				return
+			}
+
+			const lista = carros.reduce((acumulador, x) => acumulador + x.mod + " - RS: " + x.pr.toFixed(2) + "\n", "")
+			resp.innerText = "Lista dos Carros Cadastrados \n" + "-".repeat(40) + "\n" + lista
+		})//fim função listarCarros
+
+
+		frm.btOrdem.addEventListener("click", () => {
+			if (carros.length == 0) {
+				alert("Não há carros listados")
+				return
+			}
+
+			// implementar ordem crescente em vetor de objetos com o método sort
+			carros.sort(function (a, b) { return a.mod < b.mod ? -1 : a.mod > b.mod ? 1 : 0 })
+
+            resp.innerText = carros
+          
+
+			//nesse ponto o vetor carros já está em ordem crescente, resta você finalizar com os comandos necessários para mostrá-lo na tela
+
+		}) //fim função ordemAlfabetica 
+
+		frm.btFiltrar.addEventListener("click", () => {
+			//Insira os comandos necessário para a ação de filtrar conforme o enunciado.
+           preço = Number(prompt("informe o preço"))
+
+    
+
+		})
+	</script>
+</body>
+
+</html>
+
