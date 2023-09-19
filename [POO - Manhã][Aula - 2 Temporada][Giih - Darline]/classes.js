@@ -18,3 +18,12 @@ class Aluno{
         return this.ultimoNome + ', ' + this.primeiroNome 
     }
 }
+
+class Turma {
+    constructor(){
+        this.listaDeAlunos = []
+    }
+    adicionarAluno(aluno){
+        this.listaDeAlunos.push(aluno)
+    }
+}
