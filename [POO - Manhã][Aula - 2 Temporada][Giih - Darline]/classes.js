@@ -4,7 +4,7 @@ class Aluno{
         this.ultimoNome = ultimoNome,
         this.turma = turma,
         this.matricula = matricula,
-        this.dataDeNascimento = dataDeNascimento,
+        this.dataDeNascimento = new Date(dataDeNascimento),
         this.foto = foto
     }
 
