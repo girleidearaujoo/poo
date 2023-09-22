@@ -1,8 +1,7 @@
 class Aluno{
-    constructor(primeiroNome, ultimoNome, turma, matricula, dataDeNascimento, foto){
+    constructor(primeiroNome, ultimoNome, matricula, dataDeNascimento, foto){
         this.primeiroNome = primeiroNome,
         this.ultimoNome = ultimoNome,
-        this.turma = turma,
         this.matricula = matricula,
         this.dataDeNascimento = new Date(dataDeNascimento),
         this.foto = foto
@@ -11,8 +10,8 @@ class Aluno{
     getIdade(){
         var date = new Date();
         var dataAtual = date.getFullYear();
-        var data = this.dataDeNascimento.split('/').map(i => Number(i))
-        return (dataAtual - data[2]) 
+        var data = this.dataDeNascimento
+        return (dataAtual - data.getFullYear()) 
     }
     getNome(){
         return this.ultimoNome + ', ' + this.primeiroNome 
