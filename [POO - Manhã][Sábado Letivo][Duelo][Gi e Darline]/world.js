@@ -8,6 +8,15 @@ function parede(x, y, width, height) {
     });
 }
 
+function paredeColorida(x, y, width, height, color) {
+    return Matter.Bodies.rectangle(x, y, width, height,{
+        isStatic: true,
+        render: {
+            fillStyle: color
+        }
+    });
+}
+
 // Player
 function dueloVisual(gerente) {
     let player1Visual = Matter.Bodies.polygon(90, 330, gerente.player1.qtdLados, gerente.player1.raio, {
@@ -32,7 +41,7 @@ function dueloVisual(gerente) {
 // Bala
 function balaVisual(player, lado) {
     if(lado === 'esquerda'){
-        return Matter.Bodies.circle(140, 200, player.bala.raio, {
+        return Matter.Bodies.circle(165, 300, player.bala.raio, {
             label: `balaEsquerda`,
             restitution: 0.5,
             render: {
@@ -147,11 +156,15 @@ Matter.World.add(engine.world, [
     parede(280, 800, 2000, 20), // bottom
     parede(0, 400, 20, 1024),   // left
     parede(1024, 400, 20, 1024), // right
+    paredeColorida(520, 700, 20, 500, '#fa7a87'), // parede de baixo
+    paredeColorida(520, 100, 20, 200, '#54faff'), // parede de cima
+    
 ]);
+// x, y, width, height
 
 // Criação dos players
-let player1 = new Player('Alex', 6, 70, '#3456fa', 17, 20);
-let player2 = new Player('Sandro', 5, 70, '#00fa45', 17, 20);
+let player1 = new Player('Alex', 6, 70, '#3456fa', 12, 20);
+let player2 = new Player('Sandro', 6, 70, '#00fa45', 12, 20);
 let juiz = new GerenciadorDeDuelo(player1, player2)
 
 // Posicionamento dos players na tela
