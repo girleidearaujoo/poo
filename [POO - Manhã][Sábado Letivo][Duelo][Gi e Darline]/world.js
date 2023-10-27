@@ -19,7 +19,7 @@ function paredeColorida(x, y, width, height, color) {
 
 // Player
 function dueloVisual(gerente) {
-    let player1Visual = Matter.Bodies.polygon(90, 330, gerente.player1.qtdLados, gerente.player1.raio, {
+    let player1Visual = Matter.Bodies.polygon(90, 310, gerente.player1.qtdLados, gerente.player1.raio, {
         label: gerente.player1.nome,
         isStatic: true,
         restitution: 0.5,
@@ -27,7 +27,7 @@ function dueloVisual(gerente) {
             fillStyle: gerente.player1.cor
         }
     });
-    let player2Visual = Matter.Bodies.polygon(900, 330, gerente.player2.qtdLados, gerente.player2.raio, {
+    let player2Visual = Matter.Bodies.polygon(900, 310, gerente.player2.qtdLados, gerente.player2.raio, {
         label: gerente.player2.nome,
         isStatic: true,
         restitution: 0.5,
@@ -35,7 +35,24 @@ function dueloVisual(gerente) {
             fillStyle: gerente.player2.cor
         }
     });
-    return [player1Visual, player2Visual];
+    let player3Visual = Matter.Bodies.polygon(90, 490, gerente.player3.qtdLados, gerente.player3.raio, {
+        label: gerente.player3.nome,
+        isStatic: true,
+        restitution: 0.5,
+        render: {
+            fillStyle: gerente.player3.cor
+        }
+    });
+   let player4Visual = Matter.Bodies.polygon(900, 490, gerente.player4.qtdLados, gerente.player4.raio, {
+        label: gerente.player4.nome,
+        isStatic: true,
+        restitution: 0.5,
+        render: {
+            fillStyle: gerente.player4.cor
+        }
+    });
+    return [player1Visual, player2Visual, player3Visual, player4Visual];
+
 }
 
 // Bala
@@ -48,10 +65,26 @@ function balaVisual(player, lado) {
                 fillStyle: player.bala.cor
             }
         });
-    } else 
-    if(lado === 'direita'){
-        return Matter.Bodies.circle(820, 320, player.bala.raio, {
+    } else if(lado === 'esquerda2'){
+        return Matter.Bodies.circle(165, 360, player.bala.raio, {
+            label: `balaEsquerda2`,
+            restitution: 0.5,
+            render: {
+                fillStyle: player.bala.cor
+            }
+        });
+    } else if(lado === 'direita'){
+        return Matter.Bodies.circle(820, 300, player.bala.raio, {
             label: `balaDireita`,
+            restitution: 0.5,
+            render: {
+                fillStyle: player.bala.cor
+            }
+        });
+    } else 
+    if(lado === 'direita2'){
+        return Matter.Bodies.circle(820, 360, player.bala.raio, {
+            label: `balaDireita2`,
             restitution: 0.5,
             render: {
                 fillStyle: player.bala.cor
@@ -72,12 +105,22 @@ function atirar(player, lado) {
             x: rand(1, player.velocidadeMaxDoTiro),
             y: -8
         });
-    } else if(lado === 'direita'){
+    } else if(lado === 'esquerda2'){
         Matter.Body.setVelocity(projetil, {
             x: rand(-1, -player.velocidadeMaxDoTiro),
             y: -8
         });
-    }
+    } else if(lado === 'direita'){
+            Matter.Body.setVelocity(projetil, {
+                x: rand(-1, -player.velocidadeMaxDoTiro),
+                y: -8
+            });
+    }  else if(lado === 'direita2'){
+        Matter.Body.setVelocity(projetil, {
+            x: rand(-1, -player.velocidadeMaxDoTiro),
+            y: -8
+        });
+    }    
     Matter.Body.setAngularVelocity(projetil, rand(0, player.velocidadeMaxDoTiro));
 
     Matter.World.add(engine.world, projetil);
@@ -95,6 +138,36 @@ function receberTiro(event) {
                     player1.vida = 0;
                     pair.bodyA.render.fillStyle = '#dedede';
                     console.log(`Player 1: PERDEU`);
+                }
+            }
+            Matter.World.remove(engine.world, pair.bodyB);
+        });
+    event.pairs    
+        .filter((pair) => pair.bodyA.label === player3.nome)
+        .forEach((pair) => {
+            if (pair.bodyB.label === 'balaDireita2') {
+                if (player3.vida - player4.ataque > 0) {
+                    player3.vida -= player4.ataque;
+                    console.log(`Player 3: ${player3.vida}`);
+                } else {
+                    player3.vida = 0;
+                    pair.bodyA.render.fillStyle = '#dedede';
+                    console.log(`Player 3: PERDEU`);
+                }
+            }
+            Matter.World.remove(engine.world, pair.bodyB);
+        });
+        event.pairs    
+        .filter((pair) => pair.bodyA.label === player4.nome)
+        .forEach((pair) => {
+            if (pair.bodyB.label === 'balaDireita2') {
+                if (player4.vida - player3.ataque > 0) {
+                    player4.vida -= player3.ataque;
+                    console.log(`Player 4: ${player4.vida}`);
+                } else {
+                    player4.vida = 0;
+                    pair.bodyA.render.fillStyle = '#dedede';
+                    console.log(`Player 4: PERDEU`);
                 }
             }
             Matter.World.remove(engine.world, pair.bodyB);
@@ -149,6 +222,17 @@ Matter.Runner.run(runner, engine);
 
 
 
+function trianguloCadente() {
+    let triangulo  = Matter.Bodies.polygon(rand(300, 700), 30, 3 ,10, {
+        isStatic: false,
+        restitution: 0.5,
+        render: {
+            fillStyle: '#645626'
+        }
+    });
+    Matter.World.add(engine.world, triangulo)
+}
+setInterval(trianguloCadente, 800)
 
 // Construção das 4 paredes:
 Matter.World.add(engine.world, [
@@ -156,16 +240,18 @@ Matter.World.add(engine.world, [
     parede(280, 800, 2000, 20), // bottom
     parede(0, 400, 20, 1024),   // left
     parede(1024, 400, 20, 1024), // right
-    paredeColorida(520, 700, 20, 500, '#fa7a87'), // parede de baixo
-    paredeColorida(520, 100, 20, 200, '#54faff'), // parede de cima
+    paredeColorida(520, 700, 20, 500, '#ee8b47'), // parede de baixo
+    paredeColorida(520, 100, 20, 200, '#285b8a'), // parede de cima
     
 ]);
 // x, y, width, height
 
 // Criação dos players
-let player1 = new Player('Alex', 6, 70, '#3456fa', 12, 20);
-let player2 = new Player('Sandro', 6, 70, '#00fa45', 12, 20);
-let juiz = new GerenciadorDeDuelo(player1, player2)
+let player1 = new Player('Gih', 6, 70, '#261069', 12, 20);
+let player2 = new Player('Darline', 6, 70, '#82102e', 12, 20);
+let player3 = new Player('Leticia', 8, 50, '#103d82', 12, 20);
+let player4 = new Player('Ellen', 8, 50, '#8a1555', 12, 20);
+let juiz = new GerenciadorDeDuelo(player1, player2, player3, player4)
 
 // Posicionamento dos players na tela
 Matter.World.add(engine.world, dueloVisual(juiz));
@@ -183,3 +269,31 @@ document.addEventListener('keydown', function (e) {
         atirar(player2, 'direita');
     }
 });
+
+document.addEventListener('keydown', function (e) {
+    if(player3.vida > 0 && player4.vida > 0)
+    if (e.key === 'a') { // left arrow key
+        atirar(player3, 'esquerda');
+    } else if (e.key === 'ç') { // right arrow key
+        atirar(player4, 'direita');
+    }
+});
+
+function atirar(player, lado) {
+    let projetil = balaVisual(player, lado);
+
+    if (lado === 'esquerda'){
+        Matter.Body.setVelocity(projetil, {
+            x: rand(1, player.velocidadeMaxDoTiro),
+            y: -8
+        });
+    } else if(lado === 'direita'){
+        Matter.Body.setVelocity(projetil, {
+            x: rand(-1, -player.velocidadeMaxDoTiro),
+            y: -8
+        });
+    }
+    Matter.Body.setAngularVelocity(projetil, rand(0, player.velocidadeMaxDoTiro));
+
+    Matter.World.add(engine.world, projetil);
+}
