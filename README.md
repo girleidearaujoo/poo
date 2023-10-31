@@ -4,3 +4,4 @@ Aulas de poo, conteúdos até agora:
 * Objetos
 * Classes
 * Iframes
+* Herança
