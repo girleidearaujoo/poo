@@ -1,0 +1,140 @@
+body{/* Empresas */
+
+    position: relative;
+    width: 412px;
+    height: 932px;
+    
+    background: radial-gradient(140.15% 61.64% at 5% 106.33%, #FFFFFF 0%, #FF9999 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    
+    
+    /* Rectangle 50 */
+    
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 336px;
+    height: 340px;
+    left: 31px;
+    top: 296px;
+    
+    background: #FFFFFF;
+    border: 1px solid #FF5F5F;
+    border-radius: 89.5718px;
+    
+    
+    /* Line 1 */
+    
+    position: absolute;
+    width: 340px;
+    height: 0px;
+    left: 192px;
+    top: 296px;
+    
+    border: 1px solid #FF9D9D;
+    transform: rotate(90deg);
+    
+    
+    /* Line 2 */
+    
+    position: absolute;
+    width: 333px;
+    height: 0px;
+    left: 31px;
+    top: 466px;
+    
+    border: 1px solid #FF9D9D;
+    
+    
+    /* Contrate e ajude empreendedores! */
+    
+    position: absolute;
+    width: 292px;
+    height: 101px;
+    left: 57px;
+    top: 187px;
+    
+    font-family: 'Kiwi Maru';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: center;
+    
+    color: #000000;
+    
+    
+    
+    /* veterinary 1 */
+    
+    position: absolute;
+    width: 88px;
+    height: 86px;
+    left: 239px;
+    top: 342px;
+    
+    background: url(veterinary.png);
+    
+    
+    /* pet-house 1 */
+    
+    position: absolute;
+    width: 97px;
+    height: 101px;
+    left: 67px;
+    top: 491px;
+    
+    background: url(pet-house.png);
+    
+    
+    /* pet-food 1 */
+    
+    position: absolute;
+    width: 87px;
+    height: 90px;
+    left: 72px;
+    top: 340px;
+    
+    background: url(pet-food.png);
+    
+    
+    /* pet 1 */
+    
+    position: absolute;
+    width: 99px;
+    height: 102px;
+    left: 228px;
+    top: 491px;
+    
+    background: url(pet.png);
+    
+    
+    /* AdobeStock_610456712_Preview (1) 2 */
+    
+    position: absolute;
+    width: 119px;
+    height: 119px;
+    left: 140px;
+    top: 60px;
+    
+    /* background: url(AdobeStock_610456712_Preview (1).png);
+    border-radius: 48.1667px;
+    
+    
+    /* O ChatPet apoia pequenos empreenderores! */
+    
+    /* position: absolute;
+    width: 412px;
+    height: 138px;
+    left: -7px;
+    top: 675px;
+    
+    font-family: 'Kiwi Maru';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: center;
+    
+    color: #000000; */
+    
+    } 
