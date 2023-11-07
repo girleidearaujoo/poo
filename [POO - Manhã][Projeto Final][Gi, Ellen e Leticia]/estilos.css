@@ -80,6 +80,11 @@ body{
 
 .card > .avatar{
     border: dashed 1px #e90f6d;
+    object-fit: cover;
+    border: dashed #ffedd1;
+    border-radius: 120px;
+
+    border: dashed 1px #46291c;
 
 }
 
@@ -90,5 +95,6 @@ body{
 }
 
 .card > .barra-botoes{
+    width: 100px;
     border: dashed 1px #cdc712;
 }
