@@ -68,6 +68,7 @@ body{
     border: dashed 1px #46291c;
 }
 
+
 .card{
     display: flex;
     flex-direction: row;
@@ -97,4 +98,30 @@ body{
 .card > .barra-botoes{
     width: 100px;
     border: dashed 1px #cdc712;
+}
+
+.card-expandido{
+    display: flex;
+    flex-direction: column;
+}
+.card-expandido > .conteudo{
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px 24px;
+}
+.card-expandido > .avatar{
+    max-height: 400px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    
+}
+.card-expandido>.barra-botoes{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.card-expandido > .barra-botoes > button{
+    width: 100%;
 }
