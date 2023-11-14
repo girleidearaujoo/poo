@@ -11,13 +11,10 @@ body{
     display: flex;
     flex-direction: column;
     gap: 16px;
-
     max-width: 340px;
     margin: auto;
     margin-top: 300px;
-
     padding: 20px;
-
     border-radius: 40px;
     background-color: #FFAA52;
 }
@@ -37,7 +34,6 @@ body{
 .btn-primario{
     background-color: #FF9534;
     color: #ffedd1;
-
     padding: 8px;
     border-radius: 40px;
     border: none;
@@ -63,9 +59,8 @@ body{
 .container-cards{
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 200px;
     padding: 16px;
-    border: dashed 1px #46291c;
 }
 
 
@@ -73,31 +68,20 @@ body{
     display: flex;
     flex-direction: row;
     gap: 16px;
-
     height: 100px;
-
-    border: dashed 1px #FF9534
 }
 
 .card > .avatar{
-    border: dashed 1px #e90f6d;
     object-fit: cover;
-    border: dashed #ffedd1;
     border-radius: 120px;
-
-    border: dashed 1px #46291c;
-
 }
 
 .card > .conteudo{
     width:  100%;
-    border: dashed 1px #00ff15;
-
 }
 
 .card > .barra-botoes{
     width: 100px;
-    border: dashed 1px #cdc712;
 }
 
 .card-expandido{
@@ -131,7 +115,6 @@ body{
     height: 100%;
     width: 50%;
 
-    border: solid red 3px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

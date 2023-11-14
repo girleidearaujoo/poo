@@ -1,10 +1,11 @@
 class Empreendedor{
-    constructor(nome, telefone, email, descricao, endereco){
+    constructor(nome, telefone, email, descricao, endereco, foto){
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         this.descricao = descricao;
         this.endereco = endereco;
+        this.foto = foto
     }
 }
 
