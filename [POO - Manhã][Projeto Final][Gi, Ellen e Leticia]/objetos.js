@@ -1,18 +1,140 @@
-let empreendedorA = new Empreendedor(
-    "Rihanna", 
-    "99999-99999",
-    "ririfenty@gmail.com",
-    "Robyn Rihanna Fenty (Saint Michael, 20 de fevereiro de 1988), mais conhecida como Rihanna, é uma cantora, atriz e empresária barbadense. Um dos maiores nomes da música pop no Mundo. Sua carreira artística começou profissionalmente em 2003, quando ela realizou um teste para o produtor musical Evan Rogers, no qual foi aprovada. Mais tarde, ela assinaria um contrato de seis álbuns com a gravadora Def Jam. Além de sua carreira musical, Rihanna também é conhecida por seu envolvimento em causas humanitárias, empreendimentos empresariais e na indústria da moda.",
-    "Rua Almeida 17",
-    'rihanna.jpg'
+let empreendedor1 = new PetShop(
+    "Carlos Almeida", 
+    "(82) 2597-7897",
+    "suport.guccicao@gmail.com",
+    "Serviço de PetShop. Nosso pet shop é um refúgio para amigos peludos, oferecendo um ambiente vibrante e amigável. Desde sessões de cuidados pessoais até uma ampla variedade de alimentos e brinquedos premium para animais de estimação, atendemos às necessidades de cada animal de estimação, garantindo que eles saiam felizes. ",
+    "Rua da Baguet",
+    "foto",
+    "120",
+    "37658938000103",
 )
-let empreendedorB = new Empreendedor(
-    "Adam Driver", 
-    "99999-99999",
-    "adamdriver@gmail.com",
-    "Adam Douglas Driver (San Diego, 19 de novembro de 1983) é um ator americano.[1] Ele começou sua carreira aparecendo em vários curtas-metragens, programas e filmes para a televisão antes de fazer sua estreia no cinema em J. Edgar (2011). Posteriormente, teve papéis em Lincoln (2012), Frances Ha (2012), Inside Llewyn Davis (2013), Paterson (2017), dentre outros, além de ser protagonista da trilogia que sequencia a original de Star Wars, no papel do vilão Kylo Ren, nos filmes O Despertar Da Força, Os Últimos Jedi e A Ascensão Skywalker. Driver também se apresentou em peças de teatros de diversas produções da Broadway e Off-Broadway.",
-    "Rua Almeida 17",
-    'adamdriver.webp'
+let empreendedor2 = new PetShop(
+    "Gloria Maria", 
+    "(82) 9093-2891",
+    "suport.balancePet@gmail.com",
+    "Serviço de PetShop. Mergulhe em uma experiência sensorial enquanto explora nossa seleção selecionada de produtos para animais de estimação de alta qualidade, desde acessórios de grife até guloseimas nutritivas. Nossa equipe experiente está sempre pronta para ajudar, tornando cada visita uma aventura deliciosa para seus companheiros de quatro patas.",
+    "Rua da Nanci",
+    "foto",
+    "290",
+    "16626669000123",     
+)
+let empreendedor3 = new Veterinario(
+    "Pedro Camiro", 
+    "(82) 9087-8675",
+    "suport.vetpet@gmail.com",
+    "Serviço de Veterinário. Nossa clínica combina medicina veterinária de ponta com a paixão pelos animais, oferecendo uma ampla gama de serviços, desde exames de rotina até cirurgias complexas. Com um compromisso com a excelência e uma equipe amigável e experiente, nos dedicamos a manter seus animais de estimação saudáveis ​​e prósperos.",
+    "Rua da Maria",
+    "foto",
+    "08547",
+)
+let empreendedor4 = new Baba(
+    "Patricia Amaral", 
+    "(82) (82) 3428-6731",
+    "AmaralProd@gmail.com",
+    "Serviço de Babá. Nossa dedicada equipe de babás entende que cada animal de estimação tem suas próprias preferências e necessidades. Seja administrando medicamentos, sessões de brincadeira ou simplesmente oferecendo companhia, estamos aqui para garantir que seus animais de estimação se sintam seguros e satisfeitos enquanto você estiver fora.",
+    "Rua da Nanci",
+    "foto",
+    "100.00",
+    "12937243002",
 )
 
-let meusEmprededores = [empreendedorA, empreendedorB]
+let empreendedor5 = new Hotel(
+    "Rodrigo Jonathan", 
+    "(82) 8928-6731",
+    "hotel.DogSleep@gmail.com",
+    "Serviço de Hotel. Nosso hotel foi projetado para atender às necessidades reais de cães e gatos. Cada hóspede desfruta de uma suíte luxuosa, atendimento personalizado e uma variedade de atividades para mantê-los entretidos. Nossa equipe experiente garante que seus animais de estimação se sintam como membros da realeza durante a estadia, criando um lar longe de casa para seus queridos companheiros.",
+    "Rua do pet",
+    "foto",
+    "100", 
+    "25355323000129", 
+    "Básico, Intermediario, Premium",
+    "8", 
+    "22", 
+    "5",
+)
+let empreendedor6 = new Baba(
+    "Amanda Silva", 
+    "(82) 3428-7521",
+    "mandinha.baba@gmail.com",
+    "Serviço de Babá. Nossos assistentes não são apenas cuidadores; eles são amantes dos animais e dedicados a manter o bem-estar dos seus animais de estimação. Desde abraços aconchegantes até atividades envolventes, nos esforçamos para criar um ambiente positivo e amoroso, permitindo que seus animais de estimação prosperem no conforto de sua casa.",
+    "Rua do Sol",
+    "foto",
+    "85.00",
+    "36559576027",
+)
+let empreendedor7 = new Baba(
+    "João Silva", 
+    "(82) 6098-6731",
+    "joao.adestrador@gmail.com",
+    "Serviço de Babá. Nosso objetivo é fornecer atendimento compassivo e confiável aos seus animais de estimação, oferecendo alimentação, brincadeiras e até pernoites. Com foco na construção de vínculo com cada animal de estimação, nos esforçamos para manter suas rotinas e trazer alegria aos seus dias enquanto você estiver fora.",
+    "Rua do Sol",
+    "foto",
+    "200.00",
+    "08547028064",
+)
+let empreendedor8 = new Veterinario(
+    "Ellen Jainany", 
+    "(82) 3428-0600",
+    "ellen.vet@gmail.com",
+    "Serviço de Veterinário. Nossa clínica de última geração está equipada para lidar com todos os aspectos da saúde de animais de estimação. Da medicina preventiva aos tratamentos especializados, nos concentramos em curar e nutrir o bem-estar dos seus animais de estimação. Confie em nós para sermos seus parceiros na garantia de uma vida feliz e saudável para seus amados companheiros.",
+    "Rua da Manga",
+    "foto",
+    "36555",
+)
+let empreendedor9 = new Veterinario(
+    "Antônio Cezar", 
+    "(82) 3428-6598",
+    "cezarveterinario@gmail.com",
+    "Serviço de Veterinário. Nossa equipe dedicada de veterinários e equipe de suporte oferece atendimento médico de primeira linha com um toque caloroso. Desde exames de rotina a tratamentos médicos avançados, priorizamos a saúde e o bem-estar dos seus amigos peludos, garantindo que recebam o cuidado compassivo que merecem.",
+    "Rua da Maçã",
+    "foto",
+    "12937",
+)
+let empreendedor10 = new Hotel(
+    "Cleuza Venturini", 
+    "(82) 9998-6731",
+    "ventu.hotel@gmail.com",
+    "Serviço de Hotel. Nosso hotel oferece espaços separados e aconchegantes para amigos felinos e companheiros caninos, completos com camas confortáveis, áreas de lazer estimulantes e cuidadores atenciosos. Quer o seu animal de estimação goste de uma soneca tranquila ou de uma sessão de brincadeira animada, oferecemos uma experiência personalizada para atender às preferências e personalidades únicas de cada hóspede.",
+    "Rua da Maçã",
+    "foto",
+    "250", 
+    "48008922000171", 
+    "Bronze, Prata, Ouro",
+    "10", 
+    "18", 
+    "4",
+)
+let empreendedor11 = new Hotel(
+    "David Lima", 
+    "(82) 6688-6731",
+    "dhslima@gmail.com",
+    "Serviço de Hotel. Nossas instalações de última geração foram projetadas para atender às necessidades exclusivas de cães e gatos. De acomodações espaçosas e confortáveis ​​a serviços personalizados de brincadeiras e cuidados pessoais, seus amigos peludos desfrutarão de férias por conta própria. Nossa equipe dedicada garante que cada animal de estimação receba o amor e a atenção que merece em um ambiente seguro e alegre.",
+    "Pajuçara",
+    "foto",
+    "35", 
+    "67946428000100", 
+    "Premium",
+    "8", 
+    "24", 
+    "5",
+)
+let empreendedor12 = new PetShop(
+    "Luana Verçosa", 
+    "(82) 3428-6777",
+    "vercosa.shop@gmail.com",
+    "Serviço de PetShop. Temos orgulho de oferecer o que há de mais moderno em moda e acessórios para animais de estimação, garantindo que seus amigos peludos estejam sempre à frente da curva. Seja uma coleira nova e estilosa, uma cama aconchegante ou guloseimas gourmet, nossas prateleiras estão repletas dos itens mais modernos para os animais de estimação mais modernos da cidade.",
+    "Pajuçara",
+    "foto",
+    "70",
+    "44662444000168",
+)
+
+
+let meusEmpreendedores = [empreendedor1, empreendedor2, empreendedor3, empreendedor4, empreendedor5, empreendedor6, empreendedor7, empreendedor8, empreendedor9, empreendedor10, empreendedor11, empreendedor12]
+
+let cli1 = new Cliente("Cleitin Barbosa", "14896578421",  "(82) 2368-2312", "barbosadelas@outlook.com", "foto");
+let cli2 = new Cliente("Debora Marchado", "74851294532", "(82) 2597-2891", "marchado@outlook.com", "foto");
+let cli3 = new Cliente("Eduarda Camelo", "45698712345", "(82) 2597-2834", "dudinha@gmail.com", "foto");
+let cli4 = new Cliente("Enzo Duarte", "74125896365", '(82) 9997-2891',"enzoduarte@gmail.com", "foto");
+
+let meusClientes = [cli1, cli2, cli3, cli4]

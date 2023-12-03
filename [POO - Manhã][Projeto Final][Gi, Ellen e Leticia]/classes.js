@@ -10,40 +10,41 @@ class Empreendedor{
 }
 
 class Cliente{
-    constructor(nome, cpf, telefone, email){
+    constructor(nome, cpf, telefone, email, foto){
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
         this.email = email;
+        this.foto = foto;
         }
 }
 
 class Veterinario extends Empreendedor{
-    constructor(nome,  telefone, email, descricao, endereco, crmv){
-        super(nome, telefone, email, descricao, endereco);
+    constructor(nome,  telefone, email, descricao, endereco, foto, crmv){
+        super(nome, telefone, email, descricao, endereco, foto);
         this.crmv = crmv;
     }
 }
 
 class Baba extends Empreendedor{
-    constructor(nome,  telefone, email, descricao, endereco, valor, cpf){
-        super(nome, telefone, email, descricao, endereco);
+    constructor(nome,  telefone, email, descricao, endereco, foto, valor, cpf){
+        super(nome, telefone, email, descricao, endereco, foto);
         this.valor = valor;
         this.cpf = cpf;
     }
 }
 
 class PetShop extends Empreendedor{
-    constructor(nome,  telefone, email, descricao, endereco, vagas, cnpj){
-        super(nome, telefone, email, descricao, endereco);
+    constructor(nome,  telefone, email, descricao, endereco, foto, vagas, cnpj){
+        super(nome, telefone, email, descricao, endereco, foto);
         this.vagas = vagas;
         this.cnpj = cnpj;
     }
 }
 
 class Hotel extends Empreendedor{
-    constructor(nome,  telefone, email, descricao, endereco, vagas, cnpj, tiposDeQuarto, horario_inicio, horario_termino, avaliacao){
-        super(nome, telefone, email, descricao, endereco);
+    constructor(nome,  telefone, email, descricao, endereco, foto, vagas, cnpj, tiposDeQuarto, horario_inicio, horario_termino, avaliacao){
+        super(nome, telefone, email, descricao, endereco, foto);
         this.vagas = vagas;
         this.cnpj = cnpj;
         this.tiposDeQuarto = tiposDeQuarto;
@@ -52,11 +53,4 @@ class Hotel extends Empreendedor{
         this.avaliacao = avaliacao;
     }
 }
-
-class Transacao{
-    constructor(){
-        
-    }
-}
-
 
