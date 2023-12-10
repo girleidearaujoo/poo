@@ -5,35 +5,87 @@
     font-family: 'Poppins', sans-serif;
 
 }
+
 body {
     background-image: linear-gradient(#FFAA52, white);
     height: 100%;
     background-repeat: no-repeat;
     color: aliceblue;
 }
-.lista-categoria {
+
+.categoria {
+    background: #FFFFFF;
+    border: 2px solid black;
+    width: 158.4px;
+    height: 80.2px;
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 340px;
+    flex-direction: row;
     margin: auto;
-    margin-top: 300px;
-    padding: 20px;
-    border-radius: 40px;
-    background-color: aliceblue;
+    /* border-top-right-radius: 39px; */
 }
 
-.img {
-    width: auto;
-    height: 100%;
+h2 {
+    text-align: center;
+}
+
+.btn {
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+    width: 150px;
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+.container-btn .btn {
+    align-items: center;
+    margin: 20px;
+    gap: 16px;
+    
+
+}
+.lista-categoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height according to your requirements */
+}
+
+.container-btn {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    flex-direction: column;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.categoria img {
+    /* border: 2px solid black; */
+    margin: 0px;
+    width: 75px;
+    height: 75px;
     aspect-ratio: 1;
     /* will make width equal to height (500px container) */
     object-fit: cover;
-    border: 2px solid black ;
     /* use the one you need */
 }
-
-
 
 .descricao {
     color: rgb(255, 123, 0);

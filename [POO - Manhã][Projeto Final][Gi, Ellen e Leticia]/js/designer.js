@@ -17,8 +17,8 @@ function desenharEmpresasCards(idDoContainer, arrayComAsEmpresas){
     }    
 }
 
-function desenharCardDetalhes(idCard, arrayComAsEmpresas, idEmpresas){
-    const empresas = arrayComAsEmpresas.find((empresas)=> empresas.id==idEmpresas );
+function desenharCardDetalhes(idCard, arrayComAsEmpresas, idEmpresas, class_of){
+    const empresas = arrayComAsEmpresas.find((empresas)=> empresas.id==idEmpresas && empresas instanceof class_of );
     console.log(arrayComAsEmpresas, empresas, idEmpresas);
     let cardDetalhe = document.getElementById(idCard);
     cardDetalhe.innerHTML = 
