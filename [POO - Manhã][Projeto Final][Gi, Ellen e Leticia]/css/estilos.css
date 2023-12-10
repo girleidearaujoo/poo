@@ -5,19 +5,40 @@
     font-family: 'Poppins', sans-serif;
 
 }
-img{
-    width: 100%;
-    margin: 0px;
-}
 body {
     background-image: linear-gradient(#FFAA52, white);
     height: 100%;
     background-repeat: no-repeat;
     color: aliceblue;
 }
-.descricao{
+.lista-categoria {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 340px;
+    margin: auto;
+    margin-top: 300px;
+    padding: 20px;
+    border-radius: 40px;
+    background-color: aliceblue;
+}
+
+.img {
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1;
+    /* will make width equal to height (500px container) */
+    object-fit: cover;
+    border: 2px solid black ;
+    /* use the one you need */
+}
+
+
+
+.descricao {
     color: rgb(255, 123, 0);
 }
+
 .formulario {
     display: flex;
     flex-direction: column;
@@ -34,6 +55,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .btn-primario {
     background-color: #FF9534;
     color: #ffedd1;
