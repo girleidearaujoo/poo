@@ -3,14 +3,21 @@
 * {
     font-family: 'Kiwi Maru', serif;
     font-family: 'Poppins', sans-serif;
-    
+
 }
-
+img{
+    width: 100%;
+    margin: 0px;
+}
 body {
-    background-color: black;
+    background-image: linear-gradient(#FFAA52, white);
+    height: 100%;
+    background-repeat: no-repeat;
     color: aliceblue;
-    }
-
+}
+.descricao{
+    color: rgb(255, 123, 0);
+}
 .formulario {
     display: flex;
     flex-direction: column;
@@ -27,14 +34,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-
-
-/* Rectangle 6 */
-
-
-
-
 .btn-primario {
     background-color: #FF9534;
     color: #ffedd1;
@@ -76,13 +75,16 @@ body {
     border: solid 1px #FF5F5F;
     margin: 30px;
 }
-a{
-  font-size: 20px; 
-  color: #EC0D78; 
+
+a {
+    font-size: 20px;
+    color: #EC0D78;
 }
-p{
+
+p {
     color: black;
 }
+
 .card>.avatar {
     object-fit: cover;
     border-radius: 120px;
