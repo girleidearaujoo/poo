@@ -1,5 +1,3 @@
-function carregarEmpresas(arrayComAsEmpresas) {
-    desenharEmpresasCards('container-cards', arrayComAsEmpresas);
-}
-
-carregarEmpresas(meusEmpreendedores)
+var arrayComAsEmpresas = []
+var btn = document.getElementById('vet')
+export default btn
