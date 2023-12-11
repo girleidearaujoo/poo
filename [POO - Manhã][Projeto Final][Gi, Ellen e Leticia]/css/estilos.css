@@ -61,7 +61,9 @@ h2 {
     align-items: center;
     height: 100vh; /* Adjust the height according to your requirements */
 }
-
+h3{
+    color: #EC0D78;
+}
 .container-btn {
     /* background-color: blue; */
     display: flex;

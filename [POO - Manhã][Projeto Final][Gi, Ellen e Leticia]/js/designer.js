@@ -1,42 +1,6 @@
-var arrayComAsEmpresas = []
-
-btn.addEventListener(()=>{
-    for (const obj of meusEmpreendedores) {
-      console.log(arrayComAsEmpresas);
-      if (obj instanceof Veterinario) {
-        arrayComAsEmpresas.push(obj)
-      }  
-    }
-    chamarDesigner(arrayComAsEmpresas)
-})
-
-document.getElementById('baba').addEventListener(()=>{
-    for (const obj of meusEmpreendedores) {
-      if (obj instanceof Baba) {
-        arrayComAsEmpresas.push(obj)
-      }  
-    }
-    desenharEmpresasCards('container-cards', arrayComAsEmpresas)
-})
-
-document.getElementById('hotel').addEventListener(()=>{
-    for (const obj of meusEmpreendedores) {
-      if (obj instanceof Hotel) {
-        arrayComAsEmpresas.push(obj)
-      }  
-    }
-    desenharEmpresasCards('container-cards', arrayComAsEmpresas)
-})
-document.getElementById('petshop').addEventListener(()=>{
-    for (const obj of meusEmpreendedores) {
-      if (obj instanceof PetShop) {
-        arrayComAsEmpresas.push(obj)
-      }  
-    }
-    desenharEmpresasCards('container-cards', arrayComAsEmpresas)
-})
 
 function desenharEmpresasCards(idDoContainer, arrayComAsEmpresas){
+    console.log(arrayComAsEmpresas);
     let containerCards = document.getElementById(idDoContainer);
     containerCards.innerHTML = ''; //Limpa o conteúdo do container
     console.log(arrayComAsEmpresas);
@@ -55,8 +19,8 @@ function desenharEmpresasCards(idDoContainer, arrayComAsEmpresas){
     }    
 }
 
-function desenharCardDetalhes(idCard, arrayComAsEmpresas, idEmpresas, class_of){
-    const empresas = arrayComAsEmpresas.find((empresas)=> empresas.id==idEmpresas && empresas instanceof class_of );
+function desenharCardDetalhes(idCard, arrayComAsEmpresas, idEmpresas){
+    const empresas = arrayComAsEmpresas.find((empresas)=> empresas.id==idEmpresas);
     console.log(arrayComAsEmpresas, empresas, idEmpresas);
     let cardDetalhe = document.getElementById(idCard);
     cardDetalhe.innerHTML = 
@@ -65,7 +29,7 @@ function desenharCardDetalhes(idCard, arrayComAsEmpresas, idEmpresas, class_of){
         <div class="conteudo">
             <h2 class="titulo"> ${empresas.nome} </h2>
             <p class="descricao"> ${empresas.descricao}</p>
-            <h2>${empresas.email}</h2>
+            <h3>${empresas.email}</h3>
         </div>
     </div>`;
 }
